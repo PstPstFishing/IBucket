@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IBucket"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".SetupBucketPageActivity"
             android:exported="false" />
         <activity
