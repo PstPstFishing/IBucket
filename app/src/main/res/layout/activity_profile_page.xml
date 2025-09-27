@@ -6,7 +6,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#D3D3D3"
     tools:context=".ProfilePageActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        app:cardCornerRadius="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/white">
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="250dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/person_icon"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_gravity="center">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center">
+    </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,26 +56,26 @@
         android:orientation="vertical"
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/AboutUsButton"
+            android:id="@+id/EditProfileButton"
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:text="About Us"
+            android:text="Edit Profile"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/button_background">
         </Button>
 
         <Button
-            android:id="@+id/DeveloperProfileButton"
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:text="Developer's Profile"
+            android:text="..."
             android:textColor="#FFFFFF"
             android:layout_marginBottom="20sp"
             android:textStyle="bold"
@@ -42,30 +84,29 @@
         </Button>
 
         <Button
-            android:id="@+id/SettingsLogoutButton"
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:text="Logout"
+            android:text="..."
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:background="@drawable/logoutbutton_background">
-        </Button>
-        <Button
-            android:id="@+id/DeveloperProfileButton"
-            android:layout_width="320dp"
-            android:layout_height="60dp"
-            android:text="Developer's Profile"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/button_background">
         </Button>
         <Button
-            android:id="@+id/DeveloperProfileButton"
             android:layout_width="320dp"
             android:layout_height="60dp"
-            android:text="Developer's Profile"
+            android:text="..."
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/button_background">
+        </Button>
+        <Button
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:text="..."
             android:textColor="#FFFFFF"
             android:layout_marginBottom="20sp"
             android:textStyle="bold"
