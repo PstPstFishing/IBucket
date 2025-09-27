@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfilePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/AboutUsButton"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:text="About Us"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background">
+        </Button>
+
+        <Button
+            android:id="@+id/DeveloperProfileButton"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:text="Developer's Profile"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background">
+        </Button>
+
+        <Button
+            android:id="@+id/SettingsLogoutButton"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:text="Logout"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/logoutbutton_background">
+        </Button>
+        <Button
+            android:id="@+id/DeveloperProfileButton"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:text="Developer's Profile"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background">
+        </Button>
+        <Button
+            android:id="@+id/DeveloperProfileButton"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:text="Developer's Profile"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background">
+        </Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
