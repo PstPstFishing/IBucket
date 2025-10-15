@@ -50,6 +50,16 @@
             android:layout_margin="10dp"
             android:layout_gravity="center">
         </TextView>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+        </TextView>
 
     </LinearLayout>
 
@@ -72,6 +82,39 @@
             android:layout_margin="10dp"
             android:layout_gravity="center">
         </TextView>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15sp"
+                android:background="@drawable/logo">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/logo"
+                android:layout_marginLeft="10sp">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/logo"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp">
+            </ImageView>
+
+        </LinearLayout>
 
     </LinearLayout>
 
