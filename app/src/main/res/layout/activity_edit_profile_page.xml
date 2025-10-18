@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Profile Image -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        app:cardCornerRadius="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/white">
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="250dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/person_icon"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#004D40"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Name Field -->
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPersonName" />
+
+    <!-- Email Field -->
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textEmailAddress" />
+
+    <!-- Phone Field -->
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="phone" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#004D40"
+        android:padding="12dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00695C"
+        android:padding="12dp"
+        android:fontFamily="sans-serif-medium" />
+
+</LinearLayout>
