@@ -2,27 +2,11 @@ package com.example.ibucket.Presenter
 
 class LoginPagePresenter {
 
-    fun CheckMinLengthPassword(pass:String):Boolean{
-        if (pass.length < 6)
-            return true
-        return false
-    }
+    fun CheckMinLengthPassword(pass:String):Boolean = pass.length < 8
 
-    fun ValidatePassword(Inputpass:String,pass:String) : Boolean{
-        if(Inputpass == pass )
-            return false
-        return true
-    }
+    fun ValidatePassword(Inputpass:String,pass:String) : Boolean = Inputpass != pass
 
 
-    fun ValidateEmail (Inputemail:String , email:String): Boolean{
-        if(Inputemail == email)
-            return false
-        return true
-    }
-    fun ValidateEmpty(Input:String): Boolean{
-        if(Input.length == 0)
-            return true
-        return false
-    }
+    fun ValidateEmail (Inputemail:String , email:String): Boolean = Inputemail != email
+    fun ValidateEmpty(Input:String): Boolean = Input.isEmpty()
 }

@@ -41,13 +41,35 @@
         android:textColor="#004D40"
         android:layout_marginTop="16dp"/>
 
-    <!-- Name Field -->
+    <!-- First Name -->
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/editFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Full Name"
+        android:hint="First Name"
         android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPersonName" />
+
+    <!-- Middle Name -->
+    <EditText
+        android:id="@+id/editMiddleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Middle Name"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPersonName" />
+
+    <!-- Last Name -->
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:layout_marginTop="10dp"
         android:padding="12dp"
         android:background="@drawable/edittext_background"
         android:inputType="textPersonName" />
@@ -83,6 +105,55 @@
         android:textColor="#FFFFFF"
         android:layout_marginTop="20dp"
         android:backgroundTint="#004D40"
+        android:padding="12dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Change Password Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/currentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Current Password"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New Password (min 8)"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/confirmNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm New Password"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Password"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#00695C"
         android:padding="12dp"
         android:fontFamily="sans-serif-medium" />
 

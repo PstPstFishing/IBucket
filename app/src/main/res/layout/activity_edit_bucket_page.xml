@@ -18,67 +18,52 @@
         android:layout_gravity="center"
         android:textStyle="bold"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="60dp">
-    </TextView>
+        android:layout_marginBottom="60dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/border_background"
         android:layout_marginLeft="30sp"
-        android:layout_marginRight="30sp">
+        android:layout_marginRight="30sp"
+        android:paddingBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bucket Height(cm)"
+            android:text="Bucket Height (cm)"
             android:textColor="#16161A"
             android:textStyle="bold"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="30sp"
-            android:layout_marginBottom="3sp">
-        </TextView>
+            android:layout_marginBottom="3sp" />
 
         <EditText
             android:id="@+id/EditBucketHeightEditText"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:background="@drawable/edittext_background">
-        </EditText>
-
-        <SeekBar
-            android:id="@+id/NotificationThresholdSlider"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="12sp">
-        </SeekBar>
+            android:background="@drawable/edittext_background" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notification threshold"
+            android:text="Notification Threshold (%)"
             android:textColor="#16161A"
             android:textStyle="bold"
             android:layout_marginLeft="35dp"
-            android:layout_marginBottom="3sp">
-        </TextView>
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="3sp" />
 
-        <Button
-            android:id="@+id/ResetButton"
+        <EditText
+            android:id="@+id/EditThresholdPercentEditText"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:text="Reset"
-            android:layout_margin="20sp"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/button_background">
-        </Button>
+            android:background="@drawable/edittext_background" />
 
     </LinearLayout>
-
 
     <Button
         android:id="@+id/EditSaveConfigButton"
@@ -88,8 +73,7 @@
         android:text="Save Configuration"
         android:layout_margin="20sp"
         android:textColor="#FFFFFF"
-        android:background="@drawable/button_background">
-    </Button>
+        android:background="@drawable/button_background" />
 
     <Button
         android:id="@+id/EditBucketDeleteButton"
@@ -100,7 +84,6 @@
         android:textStyle="bold"
         android:layout_marginBottom="20sp"
         android:layout_gravity="center"
-        android:background="@drawable/logoutbutton_background">
-    </Button>
+        android:background="@drawable/logoutbutton_background" />
 
 </LinearLayout>

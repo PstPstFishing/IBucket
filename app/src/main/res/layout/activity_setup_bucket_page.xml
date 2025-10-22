@@ -20,53 +20,70 @@
         android:layout_gravity="center"
         android:textStyle="bold"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp">
-    </TextView>
+        android:layout_marginBottom="60dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/border_background"
         android:layout_marginLeft="30sp"
-        android:layout_marginRight="30sp">
+        android:layout_marginRight="30sp"
+        android:paddingBottom="20dp">
 
+        <!-- Name Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bucket Height(cm)"
+            android:text="Bucket Name"
             android:textColor="#16161A"
             android:textStyle="bold"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="30sp"
-            android:layout_marginBottom="3sp">
-        </TextView>
+            android:layout_marginBottom="3sp"/>
 
         <EditText
+            android:id="@+id/BucketName"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:background="@drawable/edittext_background">
-        </EditText>
+            android:background="@drawable/edittext_background"/>
 
+        <!-- Height Field -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notification threshold"
+            android:text="Bucket Height (cm)"
             android:textColor="#16161A"
             android:textStyle="bold"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="12sp"
-            android:layout_marginBottom="3sp">
-        </TextView>
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="3sp"/>
 
         <EditText
+            android:id="@+id/BucketHeight"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="12sp"
-            android:background="@drawable/edittext_background">
-        </EditText>
+            android:background="@drawable/edittext_background"/>
+
+        <!-- Threshold Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Threshold (%)"
+            android:textColor="#16161A"
+            android:textStyle="bold"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="3sp"/>
+
+        <EditText
+            android:id="@+id/ThresholdPercent"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_background"/>
 
         <Button
             android:id="@+id/SaveConfigButton"
@@ -74,11 +91,9 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:text="Save Configuration"
-            android:layout_margin="20sp"
+            android:layout_marginTop="30sp"
             android:textColor="#FFFFFF"
-            android:background="@drawable/button_background">
-        </Button>
-
+            android:background="@drawable/button_background"/>
     </LinearLayout>
 
 </LinearLayout>
