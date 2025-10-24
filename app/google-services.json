@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "415405456901",
+    "firebase_url": "https://ibucket-e19f3-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ibucket-e19f3",
+    "storage_bucket": "ibucket-e19f3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415405456901:android:d5aa1b0a899a3a5c73266c",
+        "android_client_info": {
+          "package_name": "com.example.ibucket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBotYFuzB1-PjbQENL0drxDlNLG9TNDb9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
