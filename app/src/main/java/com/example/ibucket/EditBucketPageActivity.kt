@@ -20,6 +20,7 @@ class EditBucketPageActivity : Activity() {
         val thresholdEt = findViewById<EditText>(R.id.EditThresholdPercentEditText)
         val saveBtn = findViewById<Button>(R.id.EditSaveConfigButton)
         val deleteBtn = findViewById<Button>(R.id.EditBucketDeleteButton)
+        val backBtn = findViewById<Button>(R.id.EditBucketBackButton)
         val repo = FirebaseRepository()
 
         repo.getBucket(bucketId) { bucket, _ ->
@@ -27,6 +28,11 @@ class EditBucketPageActivity : Activity() {
                 heightEt.setText((it.heightMm / 10.0).toString())
                 thresholdEt.setText(it.thresholdPercent.toString())
             }
+        }
+
+        backBtn.setOnClickListener {
+            val intent = Intent(this, SetupBucketPageActivity::class.java)
+            startActivity(intent)
         }
 
         saveBtn.setOnClickListener {
