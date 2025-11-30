@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.ibucket.data.FirebaseRepository
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class SetupBucketPageActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,13 +40,23 @@ class SetupBucketPageActivity : Activity() {
 
             repo.createBucket(name, heightMm, threshold) { bucketId, err ->
                 if (bucketId != null) {
-                    Toast.makeText(this, "Bucket created", Toast.LENGTH_SHORT).show()
-                    repo.addSimulatedReading(bucketId, (heightMm * 0.4).toInt(), heightMm) { _, _ -> }
-                    finish()
+                    val uid = FirebaseAuth.getInstance().currentUser!!.uid
+                    val ref = FirebaseDatabase.getInstance().reference
+
+                    val updates = mapOf(
+                        "/userBuckets/$uid/$bucketId" to true,
+                        "/devices/ESP32_001/bucketId" to bucketId // Assign device!
+                    )
+
+                    ref.updateChildren(updates).addOnCompleteListener {
+                        Toast.makeText(this, "Bucket linked to device!", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
                 } else {
                     Toast.makeText(this, err?.localizedMessage ?: "Failed to create bucket", Toast.LENGTH_SHORT).show()
                 }
             }
+
         }
     }
 }

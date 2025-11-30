@@ -67,7 +67,8 @@ class EditBucketPageActivity : Activity() {
             val updates = hashMapOf<String, Any?>(
                 "/buckets/$bucketId" to null,
                 "/userBuckets/$uid/$bucketId" to null,
-                "/readings/$bucketId" to null
+                "/readings/$bucketId" to null,
+                "/devices/ESP32_001/bucketId" to null
             )
 
             ref.updateChildren(updates).addOnCompleteListener { task ->

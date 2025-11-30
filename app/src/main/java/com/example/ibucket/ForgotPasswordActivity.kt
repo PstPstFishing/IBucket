@@ -1,6 +1,7 @@
 package com.example.ibucket
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -20,23 +21,24 @@ class ForgotPasswordActivity : Activity() {
 
         submitButton.setOnClickListener {
             val email = emailField.text.toString().trim()
-            if(email.isEmpty()){
+
+            if (email.isEmpty()) {
                 Toast.makeText(this, "Enter your email", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            // Check if email exists in users node, then proceed to reset screen without email link
-            com.google.firebase.database.FirebaseDatabase.getInstance().getReference("users")
-                .orderByChild("email").equalTo(email).limitToFirst(1)
-                .get().addOnCompleteListener { task ->
-                    if(task.isSuccessful && task.result.exists()){
-                        val intent = android.content.Intent(this, ResetPasswordActivity::class.java)
-                        intent.putExtra("email", email)
-                        startActivity(intent)
-                        finish()
-                    } else {
-                        Toast.makeText(this, "Email not found", Toast.LENGTH_SHORT).show()
-                    }
+
+            auth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Password reset link sent to your email", Toast.LENGTH_LONG).show()
+                    finish() // Go back to login
+                } else {
+                    Toast.makeText(this, task.exception?.localizedMessage ?: "Failed to send email", Toast.LENGTH_LONG).show()
                 }
+            }
+            val backButton = findViewById<Button>(R.id.BackButton)
+            backButton.setOnClickListener {
+                val intent = Intent(this, LoginPageActivity::class.java)
+            }
         }
     }
 }

@@ -69,14 +69,22 @@ class HomePageActivity : Activity() {
                     val bucketRef = FirebaseDatabase.getInstance(firebaseUrl)
                         .getReference("buckets").child(bucketId)
 
-                    bucketRef.get().addOnSuccessListener { dataSnap ->
-                        val name = dataSnap.child("name").getValue(String::class.java) ?: bucketId
-                        val level =
-                            dataSnap.child("latestLevelPercent").getValue(Float::class.java) ?: 0f
+                    bucketRef.addValueEventListener(object : ValueEventListener {
+                        override fun onDataChange(dataSnap: DataSnapshot) {
+                            val name = dataSnap.child("name").getValue(String::class.java) ?: bucketId
+                            val level = dataSnap.child("latestLevelPercent").getValue(Float::class.java) ?: 0f
 
-                        bucketList.add(BucketItem(bucketId, name, level))
-                        adapter.notifyDataSetChanged()
-                    }
+                            val existing = bucketList.indexOfFirst { it.id == bucketId }
+                            if (existing >= 0) {
+                                bucketList[existing] = BucketItem(bucketId, name, level)
+                            } else {
+                                bucketList.add(BucketItem(bucketId, name, level))
+                            }
+                            adapter.notifyDataSetChanged()
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {}
+                    })
                 }
             }
 
