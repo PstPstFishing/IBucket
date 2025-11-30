@@ -1,6 +1,7 @@
 package com.example.ibucket
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -18,7 +19,13 @@ class SetupBucketPageActivity : Activity() {
         val heightField = findViewById<EditText>(R.id.BucketHeight)
         val thresholdField = findViewById<EditText>(R.id.ThresholdPercent)
         val saveButton = findViewById<Button>(R.id.SaveConfigButton)
+        val backBtn = findViewById<Button>(R.id.SetupBucketBackButton)
         val repo = FirebaseRepository()
+
+        backBtn.setOnClickListener {
+            val intent = Intent(this, SetupBucketPageActivity::class.java)
+            startActivity(intent)
+        }
 
         saveButton.setOnClickListener {
             val name = nameField.text.toString().trim()
